@@ -4,39 +4,60 @@
     box-sizing: border-box;
 }
 
-section{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 100px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.social{
-    position: absolute;
-    bottom: 40px;
+body{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+section{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgb(114, 202, 114), rgb(121, 191, 219));
+}
+
+.social{
+    display: flex;
+    position: relative;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
 .social li{
-    list-style: none
+    margin: 0 20px 0 20px;
+    position: relative;
+    list-style: none;
+    scale: 1;
+    width: 15vh;
+    height: 15vh;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
 }
 
 .social li a{
     position: relative;
-    display: inline-block;
-    margin-right: 15px;
-    width: 50px;
-    height: 50px;
+    width: 15vh;
+    height: 15vh;
     border-radius: 50%;
-    size: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1.8vh solid black;
+    transition: .3s;
+}
+
+.social li a:hover{
+    scale: 0.8;
 }
 
 .social li a img{
-    transform: scale(0.5);
-    
+    max-width: 7vh;
+    transition: .5s;
+}
+
+.social li:hover a img{
+    transform: rotate(360deg) scale(0.8);
 }
